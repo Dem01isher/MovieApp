@@ -1,11 +1,10 @@
 package com.leskov.movieapp
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import com.leskov.movieapp.databinding.ActivityMainBinding
+import com.leskov.presentation.activity.BaseBindingActivity
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
+class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
+
+    override val layoutId: Int
+        get() = R.layout.activity_main
 }
