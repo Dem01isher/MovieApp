@@ -1,6 +1,7 @@
 package com.leskov.core
 
 import android.app.Application
+import com.leskov.data.di.dataModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -13,6 +14,9 @@ class MovieApp : Application() {
         startKoin {
             androidLogger(level = Level.INFO)
             androidContext(this@MovieApp)
+            modules(listOf(
+                dataModule
+            ))
         }
     }
 }
